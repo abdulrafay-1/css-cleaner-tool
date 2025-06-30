@@ -4,7 +4,7 @@ import VscodeEditor from './components/VscodeEditor'
 import { extractSelectorsAdvanced } from './utils/extractSelectors'
 import { parseAdvancedCSS } from './utils/parseCss'
 import { calculateStats, formatResult } from './utils/calcuatesStats'
-import { BrushCleaning, Code, Code2, FileJson2, LucideMoon, LucideSun } from 'lucide-react'
+import { BrushCleaning, Code2, FileJson2, LucideMoon, LucideSun } from 'lucide-react'
 
 const App = () => {
   const [html, setHtml] = useState('')
