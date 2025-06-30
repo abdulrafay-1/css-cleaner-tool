@@ -177,9 +177,10 @@ const App = () => {
           <button
             onClick={handleCleanCss}
             disabled={!html.trim() || !css.trim()}
-            className="px-10 disabled:opacity-65 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-400 dark:disabled:bg-gray-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 disabled:cursor-not-allowed text-lg tracking-wide"
+            className="px-10 inline-flex gap-1 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-400 dark:disabled:bg-gray-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 disabled:cursor-not-allowed text-lg tracking-wide"
           >
-            🧹 Clean Unused CSS
+            <BrushCleaning />
+            Clean Unused CSS
           </button>
         </div>
 
