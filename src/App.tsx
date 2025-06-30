@@ -4,7 +4,7 @@ import VscodeEditor from './components/VscodeEditor'
 import { extractSelectorsAdvanced } from './utils/extractSelectors'
 import { parseAdvancedCSS } from './utils/parseCss'
 import { calculateStats, formatResult } from './utils/calcuatesStats'
-import { LucideMoon, LucideSun } from 'lucide-react'
+import { BrushCleaning, Code, Code2, FileJson2, LucideMoon, LucideSun } from 'lucide-react'
 
 const App = () => {
   const [html, setHtml] = useState('')
@@ -116,8 +116,12 @@ const App = () => {
       <div className="container mx-auto px-4 py-10 max-w-7xl">
         {/* Header */}
         <div className="flex md:flex-row justify-between items-center mb-10 gap-4">
-          <h1 className="text-4xl font-extrabold text-blue-700 dark:text-blue-200 tracking-tight drop-shadow-sm text-center md:text-left">
-            <span className="inline-block align-middle mr-2">🧹</span> CSS Cleaner Tool
+          <h1 className="flex items-center gap-1 text-2xl md:text-4xl font-extrabold text-blue-700 dark:text-blue-200 tracking-tight drop-shadow-sm text-center md:text-left">
+            <BrushCleaning />
+            {/* <img src="./css-brands.svg" width={34} height={34} alt="" /> */}
+            <span>
+            </span>
+            CSS Cleaner Tool
           </h1>
           <button
             onClick={toggleDarkMode}
@@ -139,7 +143,8 @@ const App = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
           {/* HTML Input */}
           <div className="space-y-2">
-            <label className="block text-base font-semibold text-blue-700 dark:text-blue-200 mb-1">
+            <label className="flex gap-1 text-base font-semibold text-blue-700 dark:text-blue-200 mb-1">
+              <Code2 />
               HTML Input
             </label>
             <VscodeEditor
@@ -153,7 +158,8 @@ const App = () => {
 
           {/* CSS Input */}
           <div className="space-y-2">
-            <label className="block text-base font-semibold text-blue-700 dark:text-blue-200 mb-1">
+            <label className="flex gap-1 text-base font-semibold text-blue-700 dark:text-blue-200 mb-1">
+              <FileJson2 />
               CSS Input
             </label>
             <VscodeEditor
@@ -171,7 +177,7 @@ const App = () => {
           <button
             onClick={handleCleanCss}
             disabled={!html.trim() || !css.trim()}
-            className="px-10 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-400 dark:disabled:bg-gray-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 disabled:cursor-not-allowed text-lg tracking-wide"
+            className="px-10 disabled:opacity-65 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 disabled:bg-gray-400 dark:disabled:bg-gray-700 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 disabled:cursor-not-allowed text-lg tracking-wide"
           >
             🧹 Clean Unused CSS
           </button>
